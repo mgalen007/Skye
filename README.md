@@ -18,7 +18,6 @@ A simple AI-powered weather agent that uses OpenAI/Groq API to fetch weather dat
   - `get_weather.py`: Fetches weather data
   - `write_report.py`: Writes reports to files
 - `requirements.txt`: Python dependencies
-- `sample.txt`, `sample2.txt`, `test.txt`: Sample files
 
 ## Installation
 
