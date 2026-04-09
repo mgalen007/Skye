@@ -13,7 +13,7 @@ write_report_schema = {
                 },
                 "content": {
                     "type": "string",
-                    "description": "This is the actual contents of the report"
+                    "description": "This is the actual contents of the report, it should contain the weather description and the city name"
                 }
             },
             "required": ["filename", "content"]
