@@ -9,7 +9,7 @@ write_report_schema = {
             "properties": {
                 "filename": {
                     "type": "string",
-                    "description": "The file to write the report to"
+                    "description": "The file to write the report to, it should be in the format of report_filename.txt unless specified otherwise."
                 },
                 "content": {
                     "type": "string",
