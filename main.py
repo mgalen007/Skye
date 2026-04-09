@@ -12,4 +12,4 @@ while True:
         }
     ]
     result = run_agent(messages)
-    print(f"Model -> {result}") 
+    print(f"Model -> {result}")
