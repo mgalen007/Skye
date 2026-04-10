@@ -37,9 +37,6 @@ def get_weather(lat: str, lon: str) -> str:
     else:
         data = response.json()
 
-    description = data["weather"][0]["description"]
-    temp = data["main"]["temp"]
-
-    return f"Temperature: {temp}, description: {description}"
+    return f"{data}"
 
     
