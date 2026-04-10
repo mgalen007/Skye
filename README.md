@@ -1,23 +1,26 @@
-# Mini Weather Agent
+# SKYE Weather Agent
 
-A simple AI-powered weather agent that uses OpenAI/Groq API to fetch weather data and generate reports.
+A visually appealing AI-powered weather agent that uses the Groq API to fetch weather data and generate structured reports. Features an interactive CLI with a modern interface.
 
 ## Features
 
-- Fetches current weather for any city using latitude and longitude via OpenWeatherMap API
-- Generates and writes weather reports to text files
-- Interactive chat interface for querying weather information
+- Fetches current weather for any location using latitude and longitude via OpenWeatherMap API
+- Generates and writes detailed weather reports to text files
+- Interactive chat interface with a polished CLI design
+- Uses structured JSON output for consistent, formatted weather reports
+- Tool-based architecture for extensible functionality
 
 ## Project Structure
 
-- `main.py`: Entry point for the interactive agent
+- `main.py`: Entry point with the interactive CLI interface
 - `agent/`: Core agent logic
-  - `dispatcher.py`: Dispatches tool calls
-  - `runner.py`: Runs the agent with LLM integration
-- `tools/`: Available tools
-  - `get_weather.py`: Fetches weather data
-  - `write_report.py`: Writes reports to files
+  - `dispatcher.py`: Dispatches tool calls to appropriate functions
+  - `runner.py`: Manages LLM integration with Groq API and response formatting
+- `tools/`: Available tools for the agent
+  - `get_weather.py`: Fetches weather data from OpenWeatherMap
+  - `write_report.py`: Writes formatted reports to files
 - `requirements.txt`: Python dependencies
+- `.env.example`: Example environment file for API keys (create this file as .env)
 
 ## Installation
 
@@ -42,11 +45,28 @@ GROQ_API_KEY=your_groq_api_key
 
 Run the agent: `python main.py`
 
-Then enter prompts like:
+You'll see the SKYE header, then enter your queries. Examples:
+
 - "What's the weather in New York?"
 - "Write a report for the weather in London"
 
-The agent will use tools to fetch data and respond accordingly.
+The agent will respond with formatted weather information or confirm report writing.
+
+### Example Output
+
+```
+╔══════════════════════════════╗
+║           SKYE v1.0           ║
+╚══════════════════════════════╝
+
+You: What's the weather in Tokyo?
+SKYE: Weather Report:
+Temperature: 22.5°C
+Humidity: 65%
+Wind Speed: 3.2 m/s
+Description: clear sky
+────────────────────────────────────────
+```
 
 ## Contributing
 
